@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hello-world"
+version = "0.0.1"
+dependencies = [
+    "hy == 1.0a4",
+    "hyrule == 0.1"
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+hello_world = ["*.hy"]
+
+[tool.setuptools]
+zip-safe = false
