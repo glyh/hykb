@@ -10,14 +10,14 @@ dependencies = [
     "hyrule == 0.1",
 
     "evdev",
-    "atexit"
+    "pathlib"
 ]
 
 [tool.setuptools.packages.find]
 where = ["src"]
 
 [tool.setuptools.package-data]
-hykb = ["*.hy"]
+hykb = ["**/*.hy"]
 
 [tool.setuptools]
 zip-safe = false
