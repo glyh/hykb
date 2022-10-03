@@ -13,11 +13,11 @@
 (import hykb [common])
 
 (setv conf-prefix
-  (Path (+ 
-         (cond 
-          [(in "XDG_CONFIG_HOME" os.environ) (get os.environ "XDG_CONFIG_HOME")]
-          [:else "~/.config"])
-         "/hykb")))
+  (/ (Path 
+       (cond 
+         [(in "XDG_CONFIG_HOME" os.environ) (get os.environ "XDG_CONFIG_HOME")]
+         [:else "~/.config"]))
+     "hykb"))
 
 (setv app-prefix
   (Path (os.path.dirname (os.path.realpath __file__))))
